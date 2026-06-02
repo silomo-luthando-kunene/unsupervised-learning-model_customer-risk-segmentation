@@ -63,10 +63,13 @@ Validating the threshold dimensions (dataset columns) need to to explain away th
 ## 💡 Business Insights
 
 ### 1. The Toxic Exposure Loop in Tier 1
-Tier 1 highlights a critical vulnerability in static underwriting. The lending engine correctly identified risk by charging this group a high average interest rate (~16%). However, the system simultaneously approved them for the **largest average capital exposure (R21,112.68)**. This compounding alignment of maximum exposure and high risk created a portfolio trap, resulting in a **35.0% actual default rate**.
+Tier 1 highlights a critical granting capital to customers. The lending engine correctly identified risk by charging this group a high average interest rate (~16%). However historically, the system simultaneously approved them for the **largest average capital exposure (R21,112.68)**. This compounding alignment of maximum exposure and high risk creates a debt cycle trap for the customers in the segment, resulting in a **35.0% actual default rate**.
 
 ### 2. The Mechanics of Exposure Capping in Tier 3
-Tier 3 demonstrates successful operational insulation. Although these retail borrowers carry the lowest average credit scores (688.43) and higher structural debt burdens, their default rate remains controlled at 16.0%. Management accounting confirms this is due to **Exposure Capping**—limiting their principal sizes to an average of R10,119.05 maintains debt sustainability and mitigates systemic balance sheet damage.
+Although these retail borrowers carry the lowest average credit scores (688.43) and higher structural debt burdens, their default rate remains controlled at 16.0%. Management accounting confirms this is due to **Exposure Capping**: limiting their principal sizes to an average of R10,119.05 maintains debt sustainability and mitigates systemic balance sheet damage.
+
+### 3. Optimal Credit Allowance and Repayment Committment for Tier 2
+Tier 2 highlights the segment with the highest credit score and lowest interest rate which justifies their average loan amount at **R17,100.53** - with a 10% delinquency rate, this segment has access to high capital amounts as it settles its debt succesfully. 
 
 ---
 
@@ -76,3 +79,4 @@ Tier 3 demonstrates successful operational insulation. Although these retail bor
 * **Scale Tier 2 Asset Allocation:** Redirect customer acquisition spend toward the Tier 2 profile. This cluster provides optimal asset-liability performance, supporting large capital generation capabilities (R17,100.53) alongside a stable 10% default floor.
 * **Dynamic Regulatory Provisioning:** Transition from a flat portfolio reserve model to dynamic capital allocation. Lowering mandatory loss provisions on the highly predictable Tier 2 and Tier 3 blocks unlocks millions in frozen cash, converting idle capital back into active lending assets.
 
+**NOTE:** The aim of this project was to practically implement Unsupervised Learning theory within the field of Fraud and Banking, effectively investigate and communicate a problem and solution and lastly to continue my Machine Learning expertise development.
