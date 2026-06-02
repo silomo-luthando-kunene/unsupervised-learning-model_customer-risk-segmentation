@@ -2,7 +2,7 @@
 Applying Principal Component Analysis and Agglomerative Hierarchical Clustering to segment borrowers based on credit standing and financial behaviour with the goal of reducing client portfolio risk.
 
 ## 🎯 Problem Statement
-Traditional lending frameworks depend heavily on linear, rule-based scoring. This structural approach overlooks multi-variable factors that determines the level of risk related to a client - like applicants with stable credit scores who simultaneously seek maximum credit while having a high debt-to-income (DTI) metrics. This blind spot results in high default/delinquency concentration, costing lenders capital, that be prevented/saved by segmenting borrowers based on their layered financial behaviour.
+Traditional lending frameworks depend heavily on linear, rule-based scoring. This structural approach overlooks multi-variable factors that determines the level of risk related to a client - like applicants with stable credit scores who simultaneously seek maximum credit while having high debt-to-income (DTI) metrics. This blind spot results in high default/delinquency concentration, costing lenders capital, that could be prevented/saved by segmenting borrowers based on their layered financial behaviour.
 
 ---
 
@@ -43,7 +43,7 @@ Our customer behaviour audit reveals a credit allowance flaw: the institution ha
 *Figure 1: Dual axis visual depicting the Delinquency Rate Percentage of a customer segment against its Average Loan Exposure.*
 
 ### 2. 2D Risk Manifold Projection (t-SNE)
-Visualizing the continuous behavioral spectrum of borrower risk and segmentation based the historic financial behaviour.
+Visualizing the continuous behavioural spectrum of borrower risk and segmentation based on their historic financial behaviour.
 
 <div align="left">
   <img src="visuals/tsne_risk_manifold.png" width="600" alt="t-SNE Risk Manifold">
@@ -63,7 +63,7 @@ Validating the threshold dimensions (dataset columns) need to to explain away th
 ## 💡 Business Insights
 
 ### 1. The Toxic Exposure Loop in Tier 1
-Tier 1 highlights a critical granting capital to customers. The lending engine correctly identified risk by charging this group a high average interest rate **(~16%)**. However historically, the system simultaneously approved them for the **largest average capital exposure (R21,112.68)**. This compounding alignment of maximum exposure and high risk creates a debt cycle trap for the customers in the segment, resulting in a **35.0% actual default rate**.
+Tier 1 highlights a critical issue in granting capital to customers. The lending engine correctly identified risk by charging this group a high average interest rate **(~16%)**. However historically, the system simultaneously approved them for the **largest average capital exposure (R21,112.68)**. This compounding alignment of maximum exposure and high risk creates a debt cycle trap for the customers in the segment, resulting in a **35.0% actual default rate**.
 
 ### 2. The Mechanics of Exposure Capping in Tier 3
 Although these retail borrowers carry the lowest average credit scores **(688.43)** and higher structural debt burdens, their default rate remains controlled at **16.0%**. Management accounting confirms this is due to **Exposure Capping**: limiting their principal sizes to an average of **R10,119.05** maintains debt sustainability and mitigates systemic balance sheet damage.
@@ -78,6 +78,6 @@ Tier 2 highlights the segment with the highest credit score and lowest interest 
 * **Enforce Algorithmic Exposure Ceilings:** Automatically limit capital deployment to a hard ceiling of **R12,000** for any new applicant landing within the Tier 1 geometric feature space. This single operational pivot immunizes the bank from the **35%** loan default risk.
 * **Scale Tier 2 Asset Allocation:** Redirect customer acquisition spend toward the Tier 2 profile. This cluster provides optimal asset-liability performance, supporting large capital generation capabilities **(R17,100.53)** alongside a stable **10%** default floor. This way you lower customer churn of the segment of customers who are the most loyal and financially prudent.
 * **Dynamic Regulatory Provisioning:** Transition from a flat portfolio model to dynamic capital allocation. Lowering loss provisions on the highly predictable Tier 2 and Tier 3 blocks unlocks millions in frozen cash, converting idle capital back into active lending assets.
-*  ** Fraud Investigation:** Investigate how much of the feature space of the customers in Tier 1 are delinquent due an inability to fulfill loan requirement versus fraud. Restructuring loan accceptance requirements ensures that bank fraud is reduced and captital reserved for defaulting customers is decreased and deployed into other profitable business segments.
+* **Fraud Investigation:** Investigate how much of the feature space of the customers in Tier 1 are delinquent due an inability to fulfill loan requirement versus fraud. Restructuring loan acceptance requirements ensures that bank fraud is reduced and captital reserved for defaulting customers is decreased and deployed into other profitable business segments.
 
 **NOTE:** The aim of this project was to practically implement newley acquired Unsupervised Learning theory applying it within the field of Banking, effectively investigating and communicating a problem and solution, and lastly to continuing with my Machine Learning expertise development.
