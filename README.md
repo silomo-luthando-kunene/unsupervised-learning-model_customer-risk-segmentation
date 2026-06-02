@@ -2,7 +2,7 @@
 Applying Principal Component Analysis and Agglomerative Hierarchical Clustering to segment borrowers based on credit standing and financial behaviour with the goal of reducing client portfolio risk.
 
 ## 🎯 Problem Statement
-Traditional lending frameworks depend heavily on linear, rule-based scoring. This structural approach overlooks multi-variable factors that determines the level of risk related to a client - like applicants with stable credit scores who simultaneously seek maximum credit while having a high debt-to-income (DTI) metrics. This blind spot results in high default/delinquency concentration, costing lenders capital,that be prevented or foreseen by segmenting borrowers based on their layered financial behaviour.
+Traditional lending frameworks depend heavily on linear, rule-based scoring. This structural approach overlooks multi-variable factors that determines the level of risk related to a client - like applicants with stable credit scores who simultaneously seek maximum credit while having a high debt-to-income (DTI) metrics. This blind spot results in high default/delinquency concentration, costing lenders capital, that be prevented/saved by segmenting borrowers based on their layered financial behaviour.
 
 ---
 
@@ -25,29 +25,37 @@ The pipeline segmented a testing sub-pool of 3,000 completed loans into three di
 | **Average Interest Rate** | **9.66%** | 11.97% | 16.03% |
 | **Average Loan Amount** | R17,100.53 | **R10,119.05** | **R21,112.68** |
 | **Actual Default Rate** | **10.0%** | **16.0%** | **35.0%** |
+| **Debt to Income Ratio** | **19.04** | **18.77** | **20.62** |
 
-*\*Note: Underlying asset values have been localized to ZAR for regional portfolio analysis.*
+
+*\*Note: **Average Loan Amount** has been localised to ZAR for easier portfolio analysis.*
 
 ---
 
 ## 🖼️ Systems & Portfolio Visualizations
 
 ### 1. Management Accounting Portfolio Audit
-Our dual-axis audit reveals a severe underwriting flaw: the institution has historically granted its largest loan sizes to the highest-risk segment (Tier 1).
+Our customer behaviour audit reveals a credit allowance flaw: the institution has historically granted its largest loan sizes to the highest risk segment (Tier 1).
 
-![Portfolio Risk Management Audit](portfolio_risk_management_audit.png)
-*Figure 1: Dual-axis evaluation showing the disconnect between historical risk pricing (interest rate bars) and active capital exposure limits (loan size line trend).*
+<div align="left">
+  <img src="visuals/portfolio_risk_management__audit.png" width="600" alt="Portfolio Risk Management Audit">
+</div>
+*Figure 1: Dual axis visual depicting the Delinquency Rate Percentage of a customer segment against its Average Loan Exposure.*
 
 ### 2. 2D Risk Manifold Projection (t-SNE)
-Visualizing the continuous behavioral spectrum of borrower risk based strictly on pre-application geometry.
+Visualizing the continuous behavioral spectrum of borrower risk and segmentation based the historic financial behaviour.
 
-![t-SNE Risk Cluster Projection](tsne_risk_manifold.png)
-*Figure 2: Non-linear t-SNE projection validating the distinct physical separation of our 3 macro risk tiers across high-dimensional space.*
+<div align="left">
+  <img src="visuals/tsne_risk_manifold.png" width="600" alt="t-SNE Risk Manifold">
+</div>
+*Figure 2: Non-linear t-SNE projection validating the distinct physical separation of our 3 macro risk tiers.*
 
 ### 3. PCA Cumulative Variance Elbow
-Validating the structural optimization threshold used to minimize feature dimensions while preserving maximum system signal.
+Validating the threshold dimensions (dataset columns) need to to explain away the customer segmentation and behaviour.
 
-![PCA Cumulative Variance Plot](pca_elbow_curve.png)
+<div align="left">
+  <img src="visuals/pca_elbow_curve.png" width="600" alt="PCA Elbow Curve">
+</div>
 *Figure 3: Cumulative variance distribution proving that feature engineering successfully condensed the multi-variable credit space down to core principal components.*
 
 ---
